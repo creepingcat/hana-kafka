@@ -13,6 +13,6 @@
                 "tasks.max": "1",
                 "topics": "hana-topic-bulk",
                 "auto.create": "true",
-                "test-hana-topic.table.name": "\"ABUSHKEVICH\".\"KAFKA_TEST_SINK_BULK\""
+                "hana-topic-bulk.table.name": "\"ABUSHKEVICH\".\"KAFKA_TEST_SINK_BULK\""
         }
 }
