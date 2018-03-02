@@ -1,0 +1,1 @@
+confluent load connect-hana-file-sink -d connect-hana-file-sink.json
