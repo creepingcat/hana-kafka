@@ -12,6 +12,6 @@
                 "schema.registry.url": "localhost:8081",
                 "topics": "hana-topic-bulk",
                 "tasks.max": "1",
-                "test-hana-topic.table.name": "\"ABUSHKEVICH\".\"KAFKA_TEST_SOURCE\""
+                "hana-topic-bulk.table.name": "\"ABUSHKEVICH\".\"KAFKA_TEST_SOURCE\""
         }
 }
