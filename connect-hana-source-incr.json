@@ -11,9 +11,9 @@
                 "connection.password": "Simplify7",
                 "schema.registry.url": "localhost:8081",
                 "mode": "incrementing",
-                "topics": "test-hana-topic-incr",
+                "topics": "hana-topic-incr",
                 "tasks.max": "1",
-                "test-hana-topic.table.name": "\"ABUSHKEVICH\".\"KAFKA_TEST_SOURCE\"",
-                "test-hana-topic.incrementing.column.name": "ID"
+                "hana-topic-incr.table.name": "\"ABUSHKEVICH\".\"KAFKA_TEST_SOURCE\"",
+                "hana-topic-incr.incrementing.column.name": "ID"
         }
 }
