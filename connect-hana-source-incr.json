@@ -1,5 +1,5 @@
 {
-        "name": "test-hana-source-incr",
+        "name": "connect-hana-source-incr",
         "config": {
                 "connector.class": "com.sap.kafka.connect.source.hana.HANASourceConnector",
                 "key.converter": "io.confluent.connect.avro.AvroConverter",
