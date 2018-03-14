@@ -1,6 +1,6 @@
-confluent load connect-hana-file-sink-bulk -d connect-hana-file-sink-bulk.json
-confluent load connect-hana-file-sink-incr -d connect-hana-file-sink-incr.json
-confluent load connect-hana-sink-bulk -d connect-hana-sink-bulk.json
-confluent load connect-hana-sink-incr -d connect-hana-sink-incr.json
-confluent load connect-hana-source-bulk -d connect-hana-source-bulk.json
-confluent load connect-hana-source-incr -d connect-hana-source-incr.json
+confluent load connect-hana-file-sink-bulk -d ~/hana-kafka/connect-hana-file-sink-bulk.json
+confluent load connect-hana-file-sink-incr -d ~/hana-kafka/connect-hana-file-sink-incr.json
+confluent load connect-hana-sink-bulk -d ~/hana-kafka/connect-hana-sink-bulk.json
+confluent load connect-hana-sink-incr -d ~/hana-kafka/connect-hana-sink-incr.json
+confluent load connect-hana-source-bulk -d ~/hana-kafka/connect-hana-source-bulk.json
+confluent load connect-hana-source-incr -d ~/hana-kafka/connect-hana-source-incr.json
