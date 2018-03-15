@@ -1,0 +1,18 @@
+{
+        "name": "connect-hana-sink-ts",
+        "config": {
+                "connector.class": "com.sap.kafka.connect.sink.hana.HANASinkConnector",
+                "key.converter": "io.confluent.connect.avro.AvroConverter",
+                "key.converter.schema.registry.url": "http://localhost:8081",
+                "value.converter": "io.confluent.connect.avro.AvroConverter",
+                "value.converter.schema.registry.url": "http://localhost:8081",
+                "connection.url": "jdbc:sap://epbyminsd0586.epam.com:30013/?databaseName=SANDBOX",
+                "connection.user": "ABUSHKEVICH",
+                "connection.password": "Simplify7",
+                "schema.registry.url": "localhost:8081",
+                "tasks.max": "1",
+                "topics": "hana-topic-ts",
+                "auto.create": "true",
+                "hana-topic-ts.table.name": "\"ABUSHKEVICH\".\"KAFKA_SINK_TS\""
+        }
+}
