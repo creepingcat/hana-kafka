@@ -1,5 +1,5 @@
 {
-        "name": "connect-hana-file-sink-incr",
+        "name": "connect-hana-file-sink-ts-v2",
         "config": {
                 "connector.class": "FileStreamSink",
                 "key.converter": "io.confluent.connect.avro.AvroConverter",
@@ -7,8 +7,8 @@
                 "value.converter": "io.confluent.connect.avro.AvroConverter",
                 "value.converter.schema.registry.url": "http://localhost:8081",
                 "schema.registry.url": "localhost:8081",
-                "topics": "hana-topic-incr",
+                "topics": "hana-topic-ts-v2",
                 "tasks.max": "1",
-                "file": "/tmp/hana_data_sink_incr.txt"
+                "file": "/tmp/hana_data_sink_ts_v2.txt"
         }
 }

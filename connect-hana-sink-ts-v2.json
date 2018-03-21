@@ -1,5 +1,5 @@
 {
-        "name": "connect-hana-sink-incr",
+        "name": "connect-hana-sink-ts-v2",
         "config": {
                 "connector.class": "com.sap.kafka.connect.sink.hana.HANASinkConnector",
                 "key.converter": "io.confluent.connect.avro.AvroConverter",
@@ -11,8 +11,7 @@
                 "connection.password": "Simplify7",
                 "schema.registry.url": "localhost:8081",
                 "tasks.max": "1",
-                "topics": "hana-topic-incr",
-                "auto.create": "true",
-                "hana-topic-incr.table.name": "\"ABUSHKEVICH\".\"KAFKA_TEST_SINK_INCR\""
+                "topics": "hana-topic-ts-v2",
+                "hana-topic-ts-v2.table.name": "\"ABUSHKEVICH\".\"KAFKA_SINK_TS_V2\""
         }
 }

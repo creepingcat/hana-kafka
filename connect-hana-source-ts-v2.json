@@ -16,13 +16,13 @@
                 "hana-topic-ts-v2.table.name": "\"ABUSHKEVICH\".\"KAFKA_SOURCE_TS\"",
                 "hana-topic-ts-v2.incrementing.column.name": "CHANGE_TS",
 		"hana-topic-ts-v2.poll.interval.ms": "6000",
-		"transforms": "createKey,extractInt,InsertSourceDetails",
-		"transforms.createKey.type": "org.apache.kafka.connect.transforms.ValueToKey",
-		"transforms.createKey.fields": "ID",
-		"transforms.extractInt.type": "org.apache.kafka.connect.transforms.ExtractField$Key",
-		"transforms.extractInt.field": "ID",
-		"transforms.InsertSourceDetails.type": "org.apache.kafka.connect.transforms.InsertField$Value",
-		"transforms.InsertSourceDetails.static.field": "SOURCE_SYSTEM",
-		"transforms.InsertSourceDetails.static.value": "HN7 SANDBOX"
+		"transforms": "insertTopic,insertSourceDetails,maskUser",
+		"transforms.insertTopic.type": "org.apache.kafka.connect.transforms.InsertField$Value",
+		"transforms.insertTopic.topic.field": "KAFKA_TOPIC",
+		"transforms.insertSourceDetails.type": "org.apache.kafka.connect.transforms.InsertField$Value",
+		"transforms.insertSourceDetails.static.field": "SOURCE_SYSTEM",
+		"transforms.insertSourceDetails.static.value": "HN7 SANDBOX",
+		"transforms.maskUser.type": "org.apache.kafka.connect.transforms.MaskField$Value",
+		"transforms.maskUser.fields": "CREATED_BY"
         }
 }
