@@ -1,6 +1,22 @@
-confluent load connect-hana-file-sink-bulk -d ~/hana-kafka/connect-hana-file-sink-bulk.json
-confluent load connect-hana-file-sink-incr -d ~/hana-kafka/connect-hana-file-sink-incr.json
-confluent load connect-hana-sink-bulk -d ~/hana-kafka/connect-hana-sink-bulk.json
-confluent load connect-hana-sink-incr -d ~/hana-kafka/connect-hana-sink-incr.json
+git clone https://github.com/creepingcat/hana-kafka
+
 confluent load connect-hana-source-bulk -d ~/hana-kafka/connect-hana-source-bulk.json
-confluent load connect-hana-source-incr -d ~/hana-kafka/connect-hana-source-incr.json
+confluent load connect-hana-file-sink-bulk -d ~/hana-kafka/connect-hana-file-sink-bulk.json
+confluent load connect-hana-sink-bulk -d ~/hana-kafka/connect-hana-sink-bulk.json
+
+confluent load connect-hana-source-ts -d ~/hana-kafka/connect-hana-source-ts.json
+confluent load connect-hana-sink-ts -d ~/hana-kafka/connect-hana-sink-ts.json
+
+confluent load connect-hana-source-ts-v2 -d ~/hana-kafka/connect-hana-source-ts-v2.json
+confluent load connect-hana-file-sink-ts-v2 -d ~/hana-kafka/connect-hana-file-sink-ts-v2.json
+confluent load connect-hana-sink-ts-v2 -d ~/hana-kafka/connect-hana-sink-ts-v2.json
+
+
+confluent unload connect-hana-file-sink-bulk
+confluent unload connect-hana-file-sink-ts-v2
+confluent unload connect-hana-sink-bulk
+confluent unload connect-hana-sink-ts
+confluent unload connect-hana-sink-ts-v2
+confluent unload connect-hana-source-bulk
+confluent unload connect-hana-source-ts
+confluent unload connect-hana-source-ts-v2
