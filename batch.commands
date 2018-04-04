@@ -1,4 +1,5 @@
 git clone https://github.com/creepingcat/hana-kafka
+confluent start
 
 confluent load connect-hana-source-bulk -d ~/hana-kafka/connect-hana-source-bulk.json
 confluent load connect-hana-file-sink-bulk -d ~/hana-kafka/connect-hana-file-sink-bulk.json
@@ -11,6 +12,10 @@ confluent load connect-hana-source-ts-v2 -d ~/hana-kafka/connect-hana-source-ts-
 confluent load connect-hana-file-sink-ts-v2 -d ~/hana-kafka/connect-hana-file-sink-ts-v2.json
 confluent load connect-hana-sink-ts-v2 -d ~/hana-kafka/connect-hana-sink-ts-v2.json
 
+confluent status connectors
+
+kafka-topics --zookeeper localhost:2181 --list
+sudo kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic hana-topic-bulk --from-beginning
 
 confluent unload connect-hana-file-sink-bulk
 confluent unload connect-hana-file-sink-ts-v2
@@ -20,3 +25,9 @@ confluent unload connect-hana-sink-ts-v2
 confluent unload connect-hana-source-bulk
 confluent unload connect-hana-source-ts
 confluent unload connect-hana-source-ts-v2
+
+kafka-topics --zookeeper localhost:2181 --topic hana-topic-bulk --delete
+kafka-topics --zookeeper localhost:2181 --topic hana-topic-ts --delete
+kafka-topics --zookeeper localhost:2181 --topic hana-topic-ts-v2 --delete
+
+confluent stop
