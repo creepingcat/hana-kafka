@@ -1,2 +1,2 @@
 # hana-kafka
-Scripts for HANA-Kafka integration
+Scripts for HANA <-> Kafka integration
